@@ -7,6 +7,12 @@ package com.andin.game.tictactoe.data;
 public class Constants {
 
     public final static String DIFFICULTY = "difficulty";
+    public final static String COINS = "coins";
+    public final static String PREFERENCES = "preferences";
+    public final static String PROGRESS = "progress";
+    public final static String MUSIC = "music";
+    public final static String MEDIUM = "medium";
+    public final static String IMPOSSIBLE = "impossible";
     public static final int HARD = 0;
     public static final int NORMAL = 1;
     public static final int EASY = 2;

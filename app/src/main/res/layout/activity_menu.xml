@@ -13,14 +13,34 @@
     android:background="@mipmap/tttmenu">
 
     <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/playvsfriend"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageButton"
+        android:background="@android:color/transparent"
+        android:onClick="pvpClicked" />
+
+    <ImageButton
         android:layout_height="60dp"
-        android:layout_marginTop="129dp"
         android:id="@+id/playButton"
         android:scaleType="fitXY"
         android:background="@android:color/transparent"
         android:onClick="playClicked"
         android:layout_width="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@mipmap/playnow" />
+        app:srcCompat="@mipmap/playnow"
+        android:layout_marginBottom="59dp"
+        android:layout_above="@+id/imageButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/saxButton"
+        android:background="@android:color/transparent"
+        android:onClick="musicClicked"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

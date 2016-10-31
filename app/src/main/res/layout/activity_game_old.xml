@@ -9,27 +9,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:layout_alignParentBottom="false"
-    android:background="#FFC501">
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
-        android:id="@+id/textView" />
+    android:background="@mipmap/choosing">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:columnCount="3"
         android:rowCount="3"
-        android:background="@android:drawable/screen_background_dark_transparent"
-        android:layout_height="270dp"
         android:id="@+id/buttonsgrid"
-        android:layout_alignParentBottom="true"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/screen_background_dark_transparent">
 
         <Button
             android:layout_width="wrap_content"
@@ -76,7 +67,6 @@
             android:layout_alignStart="@+id/b9" />
 
         <Button
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:textSize="35sp"
@@ -85,10 +75,12 @@
             android:background="@android:drawable/screen_background_light_transparent"
             android:id="@+id/b3"
             android:onClick="buttonsClicked"
-            android:layout_alignBaseline="@+id/b2"
-            android:layout_alignBottom="@+id/b2"
             android:layout_alignLeft="@+id/b6"
-            android:layout_alignStart="@+id/b6" />
+            android:layout_alignStart="@+id/b6"
+            android:layout_width="match_parent"
+            android:layout_alignRight="@+id/b6"
+            android:layout_alignEnd="@+id/b6"
+            android:layout_alignBottom="@+id/b2" />
 
         <Button
             android:layout_width="wrap_content"

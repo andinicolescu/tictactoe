@@ -63,6 +63,7 @@ public class NormalAI extends RuleBasedStrategy {
                 temp = winDiagonals(board);
                 if (temp != (-1)) {
                     board[temp / 3][temp % 3] = PC_MOVE;
+                    return temp;
                 }
                 temp = notLose(board);
                 if (temp != (-1)) {
@@ -88,6 +89,7 @@ public class NormalAI extends RuleBasedStrategy {
                 temp = winDiagonals(board);
                 if (temp != (-1)) {
                     board[temp / 3][temp % 3] = PC_MOVE;
+                    return temp;
                 }
                 temp = notLose(board);
                 if (temp != (-1)) {
@@ -114,6 +116,7 @@ public class NormalAI extends RuleBasedStrategy {
                 temp = winDiagonals(board);
                 if (temp != (-1)) {
                     board[temp / 3][temp % 3] = PC_MOVE;
+                    return temp;
                 }
                 temp = notLose(board);
                 if (temp != (-1)) {
@@ -140,6 +143,7 @@ public class NormalAI extends RuleBasedStrategy {
                 temp = winDiagonals(board);
                 if (temp != (-1)) {
                     board[temp / 3][temp % 3] = PC_MOVE;
+                    return temp;
                 }
                 temp = notLose(board);
                 if (temp != (-1)) {
@@ -158,14 +162,17 @@ public class NormalAI extends RuleBasedStrategy {
                 break;
         }
 
-        for (int i = 0; i < 9; i++) {
-            if (board[i / 3][i % 3] == 0) {
-                board[i / 3][i % 3] = PC_MOVE;
-                return i;
+        for (int k = 0; k < 3; k++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[k][j] == 0) {
+                    board[k][j] = PC_MOVE;
+                    int l = k * 3 + j;
+                    return l;
+                }
             }
         }
 
-        return 0;
+        return 7;
     }
 
 }
